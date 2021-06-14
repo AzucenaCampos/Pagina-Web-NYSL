@@ -1,0 +1,281 @@
+:root{
+    --primary-color: rgba(6, 55, 119, 0.945);
+    --secondary-color: rgba(17, 90, 173, 0.884);
+}
+
+body{
+    font: oblique 100% cursive;
+    background-color: rgba(119, 164, 223, 0.822);
+    width: auto;
+}
+
+.container{
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "navbar"
+    "main"
+    "footer";
+}
+
+/*estilos del header*/
+header{
+    display: grid;
+    grid-template-areas:
+    "logo h1"
+    "stadium stadium";
+}
+#logo{
+    grid-area: logo;
+    width: 140px;
+    margin: auto ;
+}
+h1{
+    grid-area: h1;
+    align-items: center;
+    font: oblique bold 270% cursive;
+    color: var(--primary-color);
+    text-shadow: 0 0 3px rgb(69, 238, 17);
+    width: auto;
+    margin: auto 5px;
+}
+#stadium{
+    grid-area:stadium;
+    height: 48vh;
+    background-repeat: no-repeat;
+    background-image: url("imagen/design2_image1.jpg");
+    background-size: cover;
+}
+
+/*estilos del navbar*/
+.navbar{
+    grid-area: navbar;
+    height: 50%;
+    top:0;
+}
+
+nav{  
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 70%;
+}
+
+nav>a{
+    display: inline-block;
+    border: 7px black;
+    font-weight: normal;  
+    text-decoration: none;
+    padding: 5px;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #ffffff;
+    background-color:var(--primary-color);
+    border-radius: 10px;
+    box-shadow: 3.7px 3.7px 1px black;
+    margin-right: 50px; 
+}
+
+.boton{
+    background-color: rgba(27, 156, 23, 0.842);
+}
+
+/*estilos del main*/
+
+main{
+    grid-area: main;
+    top: 20px;
+    margin: 20px auto;
+}
+h2{  
+    margin:0px;  
+    color: rgb(23, 54, 156);
+    text-align: left;
+    font: oblique bold 200% cursive;
+    top: 50%;
+    text-decoration: underline;
+}
+main>article{
+    width: 90%;
+    border: 3px solid var(--secondary-color); 
+    border-radius: 0 20px 0 0;
+    margin: 20px 10px;
+    padding: 10px;
+}
+
+#calendario{
+    padding: 20px;
+    margin: 30px;
+    float:left;
+    width: 25vw;
+    height: 30vh;
+    border-radius: 50px;
+}
+
+#divLeft{
+    margin-top: 100px;
+    margin-left:25px;
+    width: 90vw;
+}
+
+p{
+    margin: 5px;
+    width: auto;
+    font-size: 120%;
+}
+
+#imagen2{
+    margin: 20px;
+    width:300px;
+    border-radius: 20%;
+    float: left;
+    
+}
+
+
+/*estilos de grid-container*/
+ .grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    width: 100%;
+    margin: 20px auto;  
+ }
+ article>img{
+    width: 22vw;
+    height: 28vh;
+    border-radius: 5px solid rgb(13, 13, 245);
+    margin: 5px;
+ }
+.person_column{
+    margin: auto;
+}
+.person_column:hover{
+    transform: scale(1.5);
+}
+.grid-container>article>img{
+    border: 3px solid white;
+    border-radius: 20px;  
+}
+
+aside{
+    grid-area:aside;
+}
+
+/*estilos de tabla*/
+
+th, td{
+    border: 1px solid black;
+}
+
+.table{
+    margin: 25px;
+    
+}
+#table1{
+    width: 45%;
+    float: left;
+    margin: 10px;
+    text-align: center;
+}
+
+#table2{
+    width: 45%;
+    float: left;
+    margin: 10px;
+    text-align: center;
+}
+
+#table3{
+    width: 92%;
+    margin: 10px;
+    
+    text-align: center;
+}
+/*estilos thead*/
+thead{
+    background-color: rgba(28, 74, 202, 0.815);
+    color: white;
+}
+
+/*estilos tbody*/
+tbody tr:nth-child(2n)>tbody{
+
+    background-color: ivory;
+}
+tbody:hover{
+    background-color: rgb(121, 148, 185);
+}
+
+/*estilos de register*/
+
+form{
+    align-items: center;
+    display: grid;
+    padding: 10px;  
+}
+fieldset{
+    border-radius: 10px;
+    padding: 10px;
+    border: solid var(--primary-color);
+    margin: auto;
+    width: 68%;
+}
+legend>p{
+    text-align: left;
+}
+
+legend{
+    text-align: center;  
+}
+
+label{
+    font-size: 15px;
+    
+}
+input{
+    margin: 10px;
+    border-style: none;
+    border-bottom: 2px solid black;
+    font-size: 12px;
+}
+
+#submit{
+    width: 8vw;
+    height: 5vh;
+    margin: auto;
+    border-radius: 10px;
+    border: solid black;
+}
+
+/*estilos de footer*/
+
+footer{
+    display: grid;
+    grid-template-areas: 
+    "foot1 foot2";
+    grid-area: footer;
+    height: 70px;
+    margin: 25px;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    color: wheat;
+    
+    align-items: center;
+}
+
+#foot1{
+    grid-area: foot1;
+    text-align: center;
+}
+#foot2{
+    grid-area: foot2;
+    text-align: center;
+}
+
+#foot2>img{
+    width: 50px;
+    height: 50px;
+    
+}
